@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.className, "g-root g-root_theme_dark")}>
+      <body className={clsx(inter.className, "g-root g-root_theme_light")}>
         <NavBar></NavBar>
         {children}
       </body>
