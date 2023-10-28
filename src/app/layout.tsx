@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import "@gravity-ui/uikit/styles/fonts.css";
+import "@gravity-ui/uikit/styles/styles.css";
+import clsx from "clsx";
+import NavBar from "./Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <h2>Help Menu</h2>
-          <Link href="/">Home</Link>
-        </nav>
+      <body className={clsx(inter.className, "g-root g-root_theme_dark")}>
+        <NavBar></NavBar>
         {children}
       </body>
     </html>
